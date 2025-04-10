@@ -1,7 +1,6 @@
 import streamlit as st
 from utils import generate_prompt
 
-
 st.header("提示词工程小助手✍🏻")
 with st.sidebar:
     openai_api_key = st.text_input("请输入API密钥：", type="password")

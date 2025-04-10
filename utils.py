@@ -4,6 +4,7 @@ from prompt_template import system_template_text, user_template_text
 from langchain.output_parsers import PydanticOutputParser
 from outputparser_model import GeneratedPrompt
 
+#import os
 
 def generate_prompt(domain,objective,style,special_requirements,openai_api_key):
     prompt = ChatPromptTemplate.from_messages(
@@ -24,3 +25,8 @@ def generate_prompt(domain,objective,style,special_requirements,openai_api_key):
     })
     return result
 
+# print(generate_prompt("招聘求职",
+#                       "模拟面试官",
+#                       "严肃认真",
+#                       "用Markdown格式输出",
+#                       os.getenv("OPENAI_API_KEY")))
